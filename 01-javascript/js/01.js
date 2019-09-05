@@ -76,6 +76,12 @@ console.log(unNombreV);
 console.log(typeof unNombreV); 
 
 
+// Pour convertir un nombre entier ou float en string
+unNombre = 10;
+var unString = unNombre.toString();
+console.log(unString);
+console.log(typeof unString);
+
 
 /***************************** LA PORTEE DES VARIABLE ******************************************|
 |                                                                                               |
@@ -89,3 +95,4 @@ console.log(typeof unNombreV);
 | Elles sont disponibles UNIQUEMENT dans le scope de la console.                                |
 |                                                                                               |                         
 |************************************************************************************************/
+
