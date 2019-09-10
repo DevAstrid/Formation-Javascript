@@ -122,6 +122,9 @@ Je dois saisir mon email et mon mot de passe afin d'être authentifié sur le si
 En cas d'échec une "alert" m'informe du problème.
 Si tous se passe bien, un message de bienvenue m'accueil.
 ----------------------------------------------------------------------- */
+//On ne précise pas ou se trouve l'erreur => car piratage sait ou il y a l'erreur
+
+
 
 // // -- BASE DE DONNEES
 /*const email = "wf3@hl-media.fr";
@@ -182,3 +185,39 @@ if ( connexion( emailPrompt, mdpPrompt ) ) {
 } else {
     alert("ATTENTION, email / mdp incorrect.");
 }
+
+
+         /* -------------------------------------------|   |------------- *\
+        /                                              |   |                \
+       /           ~         LES OPERATEURS LOGIQUES          ~              \
+      /_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\
+        |                                                                   |
+        |   # L'Opérateur ET : &&. Si la combinaison email et emailUser     |
+        |   correspond, ET la combinaison mdp et mdpUser correspond.        |
+        |                                                                   |
+        |   --> Dans cette condition, les 2 doivent OBLIGATOIREMENT         |
+        |   correspondre pour être validée.                                 |   
+        |   Ex. if(emailUser === email && mdpUser === mdp) { ... }          |
+        |                                                                   |
+        |   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -   |
+        |                                                                   |
+        |   # L'Opérateur OU : ||. Si la combinaison email et emailUser     |
+        |   correspond, ET / OU la combinaison mdp et mdpUser correspond.   |
+        |                                                                   |
+        |   --> Dans cette condition, au moins l'une des deux doit          |
+        |   correspondre pour être validée.                                 |
+        |   Ex. if(emailUser === email || mdpUser === mdp) { ... }          |
+        |                                                                   |
+        |   - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -   |
+        |                                                                   |
+        |   # L'Opérateur " ! " ou encore NOT.                              |
+        |   Il signifie le CONTRAIRE DE, DIFFERENT DE                       |
+        |                                                                   |
+        |   var monUtilisateurEstApprouve = true;                           |
+        |   if ( !monUtilisateurEstApprouve ) { ... }                       |
+        |   Si mon utilisateur n'est pas approuvé                           |
+        |                                                                   |
+        |  Revient à écrire                                                 |
+        |  if ( monUtilisateurEstApprouve === false ) { ... }               |
+        |                                                                   |
+        \*_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _*/
