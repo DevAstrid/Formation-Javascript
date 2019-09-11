@@ -210,7 +210,7 @@ const mdpSaisi = prompt ("Entrez votre mot de passe", '<Entrez votre mdp>');
 for (i=0; i <= baseDeDonnees.length; i++){
     if (emailSaisi === baseDeDonnees[i].email && mdpSaisi === baseDeDonnees[i].mdp){
     document.write("Bienvenue " + baseDeDonnees[i].prenom +' '+ baseDeDonnees[i].nom +'!');
-    } else if (emailSaisi != baseDeDonnees[i].email && mdpSaisi != baseDeDonnees[i].mdp) {
+     } else {
         alert ("Mot de passe ou Email incorect");
-    }
+    } 
 }

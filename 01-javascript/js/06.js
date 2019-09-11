@@ -133,4 +133,8 @@ var montantUsd = convertEurToUsd (20);
 console.log(montantUsd);
 
 
-//EXO RECUPERER VIA UNE API LE TAUX DE CONVERSION
+/***********************************
+ *       fonction fléchée          * 
+ *      Use si un paramètre        * 
+ ***********************************/
+l = e => console.log(e);
