@@ -91,7 +91,7 @@ for (let index=0; index < prenoms.length; index++){
     console.log(prenoms [ index] );
  }
 
- 
+ document.write('<hr>');
 /***************************************************************
                          EXERCICE 2
  
@@ -120,7 +120,7 @@ for (let i=0; i < array.length; i++ ){
   }
  console.log( somme2 );
 
-  
+ document.write('<hr>');
 /***************************************************************
                          EXERCICE 3
  
@@ -177,4 +177,40 @@ let i=0;
 while (i<=11){
     document.write("Nous sommes au mois de " +'<strong>' +month[i] +'</strong>' +'<br>');
     i++;
+}
+
+document.write('<hr>');
+document.write('<hr>');
+/***************************************************************
+                         EXERCICE 5
+ 
+ ***************************************************************/
+
+
+ /* -- 
+CONSIGNE : 
+
+A partir du tableau "baseDeDonnees" fourni, vous devez mettre en place un système d'authentification. 
+Après avoir demandé à votre utilisateur son EMAIL et MOT DE PASSE, 
+et après avoir vérifié ses informations, vous lui souhaiterez la bienvenue 
+avec son nom et prénom (document.write); 
+
+En cas d'échec, vous afficherez une ALERT pour l'informer de l'erreur. 
+-- */ 
+
+const baseDeDonnees = [ 
+    {'prenom':'Hugo','nom':'LIEGEARD','email':'wf3@hl-media.fr','mdp':'wf3'}, 
+    {'prenom':'Rodrigue','nom':'NOUEL','email':'rodrigue@hl-media.fr','mdp':'wf3'}, 
+    {'prenom':'Nathanael','nom':'ORDONNE','email':'nathanael.d@hl-media.fr','mdp':'wf3'} 
+    ];
+
+const emailSaisi = prompt ("Entrez votre identifiant", '<votre email>');
+const mdpSaisi = prompt ("Entrez votre mot de passe", '<Entrez votre mdp>');
+
+for (i=0; i <= baseDeDonnees.length; i++){
+    if (emailSaisi === baseDeDonnees[i].email && mdpSaisi === baseDeDonnees[i].mdp){
+    document.write("Bienvenue " + baseDeDonnees[i].prenom +' '+ baseDeDonnees[i].nom +'!');
+    } else if (emailSaisi != baseDeDonnees[i].email && mdpSaisi != baseDeDonnees[i].mdp) {
+        alert ("Mot de passe ou Email incorect");
+    }
 }
