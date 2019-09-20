@@ -207,20 +207,51 @@ const baseDeDonnees = [
 const emailSaisi = prompt ("Entrez votre identifiant", '<votre email>');
 const mdpSaisi = prompt ("Entrez votre mot de passe", '<Entrez votre mdp>');
 
-for (let i=0; i <= baseDeDonnees.length; i++){
+for (let i=0; i < baseDeDonnees.length; i++){
+
     let bd= baseDeDonnees[i];
-    if (emailSaisi === bd.email && mdpSaisi === bd.mdp) {
-        
+        function connect(){
+        if (emailSaisi === bd.email && mdpSaisi === bd.mdp) {
+           
+             return true;
+        } else {
+            return false;
+        }  
+    }
+  
+    if (connect() == true){
         document.write("Bienvenue " + bd.prenom +' '+ bd.nom +'!');
-     
-     } else {
-     
-        alert ("Mot de passe ou Email incorect"); 
-       
-    }  
+    } else {
         
+        alert ( bd.nom + " Mot de passe ou Email incorect"); 
+
+    }  
+}   
+ 
+
+
+
+
+   /* 
+    let bd= baseDeDonnees[0];
+    function verifierData (emailSaisi,mdpSaisi){
+    if (emailSaisi === bd.email && mdpSaisi === bd.mdp) {
+        return true;
+     } else {
+        alert ("Mot de passe ou Email incorect"); 
+        return false;    
+    } 
+}    
     
-}  
+    console.log(verifierData(bd.nom));
+ */
+
+
+
+    
+
+
+
 
 
 /* for (let i=0; i <= baseDeDonnees.length; i++){
@@ -233,14 +264,19 @@ for (let i=0; i <= baseDeDonnees.length; i++){
         } 
     }
 
-    if ( connexion( emailSaisi, mdpSaisi ) ) {
+    
+    let bd= baseDeDonnees[i];
+    if (emailSaisi === bd.email && mdpSaisi === bd.mdp) {
         
         document.write("Bienvenue " + bd.prenom +' '+ bd.nom +'!');
-       
-    } else {
-        alert("ATTENTION, email / mdp incorrect.");
-        break;
-    }
+    
+     } else {
+     
+        alert ("Mot de passe ou Email incorect"); 
+        
+    }     
+   
+} 
 }  */
 
 /* let n=0
